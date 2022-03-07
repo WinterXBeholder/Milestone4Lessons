@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--
+    Define "beans" here.
+    A bean definition registers an instance of a data type with the container.
+    -->
+
+    <!-- 1. class is a fully-qualified type name. -->
+    <bean class="learn.spaceflight.personnel.Astronaut">
+        <!-- 2. constructor-args represent values provided to the constructor. -->
+        <constructor-arg value="Saraann"/>
+        <constructor-arg value="Burd"/>
+        <constructor-arg value="14"/>
+    </bean>
+</beans>

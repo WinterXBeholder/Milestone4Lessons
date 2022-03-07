@@ -1,0 +1,14 @@
+
+V	java:S125"<This block of commented-out lines of code should be removed.(à÷”üşÿÿÿÿ
+]	java:S125"<This block of commented-out lines of code should be removed.(à÷”üşÿÿÿÿ8üêÄ·ô/
+]	java:S125%"<This block of commented-out lines of code should be removed.(à÷”üşÿÿÿÿ8ú¢Í·ô/
+U	java:S1063"9Replace this use of System.out or System.err by a logger.(œ»¹›8ò®Ä·ô/
+Z	java:S1064"9Replace this use of System.out or System.err by a logger.(àŒªÓüÿÿÿÿ8ı¢Í·ô/
+U	java:S1069"9Replace this use of System.out or System.err by a logger.(œ»¹›8ş¢Í·ô/
+Z	java:S106:"9Replace this use of System.out or System.err by a logger.(àŒªÓüÿÿÿÿ8ş¢Í·ô/
+d
+java:S1128"BRemove this unused import 'learn.spaceflight.personnel.Astronaut'.(­¯¯¬úÿÿÿÿ8¸¹Í·ô/
+l
+java:S1128"ORemove this unused import 'learn.spaceflight.spacecraft.InterstellarTransport'.(½ğ”8¸¹Í·ô/
+f
+java:S1128"DRemove this unused import 'learn.spaceflight.spacecraft.MoonHopper'.(½•·øÿÿÿÿ8¸¹Í·ô/

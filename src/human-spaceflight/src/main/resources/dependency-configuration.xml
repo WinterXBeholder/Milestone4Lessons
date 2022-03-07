@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--
+    Define "beans" here.
+    A bean definition registers an instance of a data type with the container.
+    -->
+
+    <!-- 1. class is a fully-qualified type name. -->
+    <!-- Astronauts -->
+    <bean id="captain" class="learn.spaceflight.personnel.Astronaut">
+        <constructor-arg value="Saraann"/>
+        <constructor-arg value="Burd"/>
+        <constructor-arg value="14"/>
+    </bean>
+
+    <bean id="second" class="learn.spaceflight.personnel.Astronaut">
+        <constructor-arg value="Mohandis"/>
+        <constructor-arg value="Ayer"/>
+        <constructor-arg value="11"/>
+    </bean>
+
+    <bean id="engineer" class="learn.spaceflight.personnel.Astronaut">
+        <constructor-arg value="Lark"/>
+        <constructor-arg value="Middlemist"/>
+        <constructor-arg value="11"/>
+    </bean>
+
+    <bean id="doctor" class="learn.spaceflight.personnel.Astronaut">
+        <constructor-arg value="Itch"/>
+        <constructor-arg value="Yearnsley"/>
+        <constructor-arg value="5"/>
+    </bean>
+
+    <bean class="learn.spaceflight.spacecraft.InterstellarTransport">
+        <constructor-arg>
+            <!-- A list of references. -->
+            <list>
+                <ref bean="second"/>
+                <ref bean="engineer"/>
+                <ref bean="doctor"/>
+            </list>
+        </constructor-arg>
+        <!-- Setter injection. -->
+        <property name="captain" ref="captain"/>
+    </bean>
+    <bean class="learn.spaceflight.spacecraft.Probe" scope="prototype"/>
+    <!-- Adding scope="prototype" allows this bean to return a new Probe every time it's accessed, rather than updating the same bean -->
+</beans>

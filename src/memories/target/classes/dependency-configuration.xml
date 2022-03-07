@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Define beans here. -->
+
+    <!-- Repository -->
+    <!-- The service requires an interface.
+       We provide a concrete implementation of that interface.-->
+    <bean id="memoryRepository" class="learn.memories.data.MemoryFileRepository">
+        <!-- File path to the data file. -->
+        <constructor-arg value="./data/memories.txt"/>
+    </bean>
+    <!-- Service -->
+    <bean id="memoryService" class="learn.memories.domain.MemoryService">
+        <!-- ref points to the configured repository using its id. -->
+        <constructor-arg ref="memoryRepository"/>
+    </bean>
+    <!-- No constructor arguments required. -->
+    <!-- TextIO -->
+    <bean id="io" class="learn.memories.ui.ConsoleIO"/>
+    <!-- View -->
+    <bean id="view" class="learn.memories.ui.View">
+        <constructor-arg ref="io"/>
+    </bean>
+    <!-- Controller -->
+    <bean class="learn.memories.ui.Controller">
+        <constructor-arg ref="view"/>
+        <constructor-arg ref="memoryService"/>
+    </bean>
+
+</beans>
